@@ -12,6 +12,6 @@ public class WelcomeController {
 
     @GetMapping
     public ResponseEntity<String> welcome() {
-        return ResponseEntity.ok("Hello from Version 2");
+        return ResponseEntity.ok("Hello from Version vikas");
     }
 }

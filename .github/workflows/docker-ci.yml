@@ -7,6 +7,9 @@ on:
 
 jobs:
 
+  # =========================
+  # CI: Build + Docker Push
+  # =========================
   build-and-push:
     runs-on: ubuntu-latest
 
@@ -36,12 +39,16 @@ jobs:
       - name: Push Docker Image
         run: docker push vikaspatel11/spring-boot-app:latest
 
+
+  # =========================
+  # CD: Deploy Latest Image
+  # =========================
   deploy:
     needs: build-and-push
     runs-on: self-hosted
 
     steps:
-      - name: Pull latest image
+      - name: Pull latest Docker image
         shell: powershell
         run: |
           docker pull vikaspatel11/spring-boot-app:latest
@@ -59,3 +66,8 @@ jobs:
             --name spring-boot-app-container `
             -p 8080:8080 `
             vikaspatel11/spring-boot-app:latest
+
+      - name: Check running container
+        shell: powershell
+        run: |
+          docker ps
