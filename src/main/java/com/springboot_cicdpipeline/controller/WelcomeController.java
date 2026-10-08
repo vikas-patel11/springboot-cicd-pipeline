@@ -11,12 +11,7 @@ public class WelcomeController {
 
 
     @GetMapping
-    public ResponseEntity<String> welcome(){
-
-//        return ResponseEntity.ok("Welcome to sptingboot ci_cd pipeline");
-        return ResponseEntity.ok("return \"Hello from CI/CD Pipeline\";");
-
-
-
+    public ResponseEntity<String> welcome() {
+        return ResponseEntity.ok("Hello from CI/CD Pipeline");
     }
 }
