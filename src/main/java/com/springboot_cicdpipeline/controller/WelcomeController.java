@@ -12,11 +12,11 @@ public class WelcomeController {
 
     @GetMapping("/jenkin")
     public ResponseEntity<String> welcome() {
-        return ResponseEntity.ok("jenkin and docker name");
+        return ResponseEntity.ok("jenkin and docker   denjbev");
     }
 
     @GetMapping("/name")
     public ResponseEntity<String> showName() {
-        return ResponseEntity.ok("viaks patel");
+        return ResponseEntity.ok("viaks patel de do");
     }
 }
