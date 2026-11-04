@@ -10,8 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class WelcomeController {
 
 
-    @GetMapping
+    @GetMapping("/jenkin")
     public ResponseEntity<String> welcome() {
-        return ResponseEntity.ok("jenkin and docker file addedd@@@@@ ");
+        return ResponseEntity.ok("jenkin and docker name");
+    }
+
+    @GetMapping("/name")
+    public ResponseEntity<String> showName() {
+        return ResponseEntity.ok("viaks patel");
     }
 }
